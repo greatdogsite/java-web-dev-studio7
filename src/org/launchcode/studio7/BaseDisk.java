@@ -21,13 +21,13 @@ public abstract class BaseDisk  implements OpticalDisk{
         System.out.println("Reading data from " + this.mediaType);
     }
 
-    @Override
-    public void powerUp() {
-        System.out.println("Powering up...");
-    }
 
-    @Override
-    public void shutDown() {
-        System.out.println("Shutting down...");
+    abstract public void powerUp();
+
+
+    abstract public void shutDown();
+
+    public String getMediaType() {
+        return mediaType;
     }
 }

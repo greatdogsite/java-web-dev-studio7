@@ -17,6 +17,16 @@ public class DVD extends BaseDisk{
         System.out.println("The disk is spinning up from "+ this.rpmLow + " RPMs to " + this.rpmHigh +" RPMs.");
     }
 
+    @Override
+    public void powerUp() {
+        System.out.println("Powering up..." + super.getMediaType());
+    }
+
+    @Override
+    public void shutDown() {
+        System.out.println("Shutting down..." + super.getMediaType());
+    }
+
     // TODO: Implement your custom interface.
 
     // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
