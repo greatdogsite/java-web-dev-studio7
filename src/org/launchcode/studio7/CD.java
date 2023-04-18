@@ -1,6 +1,23 @@
 package org.launchcode.studio7;
 
-public class CD {
+public class CD extends BaseDisk{
+
+    private final String diskType = "CD";
+    private final Integer rpmLow = 200;
+    private final Integer rpmHigh = 500;
+    private String artistName;
+    private String albumTitle;
+
+    CD(String anArtistName ,String anAlbumTitle, Integer capacity, String contents, String mediaType){
+        super(capacity, contents, mediaType);
+        this.artistName=anArtistName;
+        this.albumTitle=anAlbumTitle;
+    }
+
+    @Override
+    public void spinDisk() {
+        System.out.println("The disk is spinning up from "+ this.rpmLow + " RPMs to " + this.rpmHigh +" RPMs.");
+    }
 
     // TODO: Implement your custom interface.
 
